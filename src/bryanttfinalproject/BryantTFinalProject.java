@@ -94,18 +94,21 @@ public class BryantTFinalProject {
 
                 }
                 else if (event <= 6){ // 30% of the time, do this
+                    
                     // call method for an encounter
                     RandomEvent occurence = new RandomEvent(characterType);
                     totalGold = occurence.Encounter(totalGold, totalHealth);
                     System.out.println("\nAs you walk away, you stretch your arms towards the sky. You never know what you'll find in the forest.");
                 }
                 else if (event > 6){ // 40% of the time, do this
+                    
                     //call method for a fight
                     RandomFight randfight = new RandomFight(characterType);
                     totalHealth = randfight.Fight(totalHealth);
                     if (totalHealth > 0){
                         System.out.println("\nYou take a swig of your canteen. The cool water relaxes you from the fight");
                     }
+                    
                     else{
                         System.out.println("\nAs you fall to the ground, everything around you fades to darkness...");
                         break;

@@ -83,7 +83,6 @@ public class RandomEvent {
                     System.out.println("Small time thieving was fun. The rush of picking the lock to a jewelry box was it's own reward.");
                     System.out.println("You also recognize that there is much to be discovered and learned by venturing outside of your normal work.");
                     System.out.println("Even if you find great fortune here, you'll probably continue to thieve... after all, who would say no to more fortune!");
-                    plotVar = 1;
                     break;
             }
             case 10:

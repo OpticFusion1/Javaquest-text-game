@@ -1,28 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package bryanttfinalproject;
+package optic_fusion1.javaquest;
 
-import java.util.Random;
-import java.util.Scanner;
+import optic_fusion1.engine.game.SimpleGame;
+import optic_fusion1.javaquest.component.entity.Player;
 
-/**
- *
- * @author S537321
- */
-public class BryantTFinalProject {
+public class JavaQuest extends SimpleGame {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+  private static final Player PLAYER = new Player();
+
+  @Override
+  public void startGame() {
+    init();
+    setRunning(true);
+  }
+
+  /*
+  public static void main(String[] args) {
         // Variable Establishment and Object Creation
         String characterType = ""; // stores letter used for character creation
         String choice; // stores letter used for what the player wants to do within an event
         String gameChoice; // stores letter used for what the player wants to do
-        Player player = new Healer(); // initial character
         int totalGold = 3; // your total gold!
         int totalHealth = 10; // your total health!
         int exitLoop = 0; // when set to 1, the current loop will not loop again
@@ -73,8 +69,10 @@ public class BryantTFinalProject {
             }
         }
         //Gameplay loop
-        exitLoop = 0;
-        while (exitLoop != 1){
+   */
+  @Override
+  public void tick() {
+    /*
             System.out.println("\nWhat would you like to do?");
             System.out.println("{?} Status Report || {n} {s} {e} {w} Move 1 Space North, South, East, or West || {q} Quit");
             gameChoice = scan.nextLine();
@@ -138,5 +136,7 @@ public class BryantTFinalProject {
         System.out.println("health: " + totalHealth);
         System.out.println("gold: " + totalGold);
         System.out.println("Thanks for playing!");
-    }
+     */
+  }
+
 }

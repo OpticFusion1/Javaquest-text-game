@@ -5,11 +5,12 @@ import optic_fusion1.javaquest.component.entity.Player;
 
 public class JavaQuest extends SimpleGame {
 
-  private static final Player PLAYER = new Player();
+  private Player player;
 
   @Override
   public void startGame() {
     init();
+    player = new Player(this);
     setRunning(true);
   }
 

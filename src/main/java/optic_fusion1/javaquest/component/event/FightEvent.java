@@ -2,6 +2,7 @@ package optic_fusion1.javaquest.component.event;
 
 import java.util.Random;
 import java.util.Scanner;
+import optic_fusion1.engine.game.Game;
 import optic_fusion1.javaquest.component.entity.Player;
 
 public class FightEvent extends Event{
@@ -9,8 +10,8 @@ public class FightEvent extends Event{
   private static final Random RANDOM = new Random();
   private static final Scanner SCANNER = new Scanner(System.in);
   
-  public FightEvent(String name) {
-    super(name);
+  public FightEvent(String name, Game game) {
+    super(name, game);
   }
 
   @Override

@@ -1,25 +1,33 @@
 package optic_fusion1.javaquest.component.event;
 
+import java.util.Random;
+import java.util.Scanner;
+import optic_fusion1.engine.game.Game;
+import static optic_fusion1.engine.game.Game.LOGGER;
 import optic_fusion1.javaquest.component.entity.Player;
 
-public class EncounterEvent extends Event{
+public class EncounterEvent extends Event {
 
-  public EncounterEvent(String name) {
-    super(name);
+  private static final Random RANDOM = new Random();
+
+  public EncounterEvent(String name, Game game) {
+    super(name, game);
   }
 
+  //30% of the time a random encounter will occur
   @Override
   public int run(Player player) {
-    /*
-    
-    // 30% of the time a random encounter will occur 
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner = getGame().getScanner();
     String choice = "";
-    int Random;
-    int encounterInt = 1 + random.nextInt(5);
+    int random;
+    int encounterInt = 1 + RANDOM.nextInt(5);
     int goldFound = 0;
-
-    System.out.println("**************************************************************************");
+    LOGGER.info("**************************************************************************");
+    if (encounterInt == 1) {
+      LOGGER.info("You stumble upon a large golden treature chest with an unknown language enscribed on the casing.");
+      LOGGER.info("The treature chest has a large padlock in the center. \n What do you do?");
+    }
+    /*
     if (encounterInt == 1) {
       System.out.println("You stumble upon a large golden treasure chest with an unknown language enscribed on the casing.");
       System.out.println("The treasure chest has a large padlock in the center. \nWhat do you do?");
@@ -341,7 +349,7 @@ public class EncounterEvent extends Event{
         break;
     }
     return totalGold;
-    */
+     */
   }
 
 }

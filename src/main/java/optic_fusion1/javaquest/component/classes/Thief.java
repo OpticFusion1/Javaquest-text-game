@@ -1,11 +1,12 @@
 package optic_fusion1.javaquest.component.classes;
 
+import optic_fusion1.engine.game.Game;
 import optic_fusion1.javaquest.component.entity.Player;
 
 public class Thief extends BaseClass {
 
-  public Thief(String name, Player player) {
-    super(name, player);
+  public Thief(String name, Player player, Game game) {
+    super(name, player, game);
   }
 
   @Override
@@ -23,6 +24,11 @@ public class Thief extends BaseClass {
   public String toString() {
     return "Thief status:\nHealth: " + getPlayer().getHealth() + "\nScore: " + getPlayer().getScore()
             + "The Thief's special move is " + getSpecialMove();
+  }
+  
+  @Override
+  public char getType() {
+    return 't';
   }
 
 }

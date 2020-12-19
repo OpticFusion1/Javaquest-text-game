@@ -1,11 +1,12 @@
 package optic_fusion1.javaquest.component.classes;
 
+import optic_fusion1.engine.game.Game;
 import optic_fusion1.javaquest.component.entity.Player;
 
 public class Knight extends BaseClass {
 
-  public Knight(String name, Player player) {
-    super(name, player);
+  public Knight(String name, Player player, Game game) {
+    super(name, player, game);
   }
 
   @Override
@@ -25,4 +26,9 @@ public class Knight extends BaseClass {
             + "The Knight's special move is " + getSpecialMove();
   }
 
+  @Override
+  public char getType() {
+    return 'k';
+  }
+  
 }

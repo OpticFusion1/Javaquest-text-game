@@ -1,11 +1,12 @@
 package optic_fusion1.javaquest.component.classes;
 
+import optic_fusion1.engine.game.Game;
 import optic_fusion1.javaquest.component.entity.Player;
 
 public class Healer extends BaseClass {
 
-  public Healer(String name, Player player) {
-    super(name, player);
+  public Healer(String name, Player player, Game game) {
+    super(name, player, game);
   }
 
   @Override
@@ -24,6 +25,11 @@ public class Healer extends BaseClass {
   public String toString() {
     return "Healer status:\nHealth: " + getPlayer().getHealth() + "\nScore: " + getPlayer().getScore()
             + "The Healer's special move is " + getSpecialMove();
+  }
+  
+  @Override
+  public char getType() {
+    return 'h';
   }
 
 }
